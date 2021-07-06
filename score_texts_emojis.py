@@ -1,14 +1,5 @@
-# -*- coding: utf-8 -*-
 
-""" Use DeepMoji to score texts for emoji distribution.
-
-The resulting emoji ids (0-63) correspond to the mapping
-in emoji_overview.png file at the root of the DeepMoji repo.
-
-Writes the result to a csv file.
-"""
 from __future__ import print_function, division
-import example_helper
 import json
 import csv
 import numpy as np
@@ -24,7 +15,8 @@ TEST_SENTENCES = [u'I love mom\'s cooking',
                   u'I love messing with yo mind!!',
                   u'I love you and now you\'re just gone..',
                   u'This is shit',
-                  u'This is the shit']
+                  u'This is the shit',
+                  u'i am disgusted']
 
 
 def top_elements(array, k):
@@ -64,7 +56,7 @@ for i, t in enumerate(TEST_SENTENCES):
     scores.append(t_score)
     print(t_score)
 
-with open(OUTPUT_PATH, 'wb') as csvfile:
+with open(OUTPUT_PATH, 'w') as csvfile:
     writer = csv.writer(csvfile, delimiter=',', lineterminator='\n')
     writer.writerow(['Text', 'Top5%',
                      'Emoji_1', 'Emoji_2', 'Emoji_3', 'Emoji_4', 'Emoji_5',

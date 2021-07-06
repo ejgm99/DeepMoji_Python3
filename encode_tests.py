@@ -1,9 +1,11 @@
-# -*- coding: utf-8 -*-
+from __future__ import print_function, division
+import os
+
+print(os.getcwd())
 
 """ Use DeepMoji to encode texts into emotional feature vectors.
 """
-from __future__ import print_function, division
-import example_helper
+# import example_helper
 import json
 import csv
 import numpy as np
@@ -37,7 +39,3 @@ encoding = model.predict(tokenized)
 
 print('First 5 dimensions for sentence: {}'.format(TEST_SENTENCES[0]))
 print(encoding[0, :5])
-
-# Now you could visualize the encodings to see differences,
-# run a logistic regression classifier on top,
-# or basically anything you'd like to do.
