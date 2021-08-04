@@ -18,7 +18,6 @@ TEST_SENTENCES = [u'I love mom\'s cooking',
                   u'This is the shit',
                   u'i am disgusted']
 
-
 def top_elements(array, k):
     ind = np.argpartition(array, -k)[-k:]
     return ind[np.argsort(array[ind])][::-1]
