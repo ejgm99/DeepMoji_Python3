@@ -1,3 +1,5 @@
+This is just an underuqalified person rewriting code as needed into python3 on a windows laptop with a anaconda package handler, I'd recommend going to this github for an up to date explanation, that being said, if you need DeepMoj translated into python3 that's available here.
+
 ### ------ Update September 2018 ------
 It's now been a year since DeepMoji was released and we're trying to understand how it's being used such that we can make improvements and provide you with better models in the future. 
 
